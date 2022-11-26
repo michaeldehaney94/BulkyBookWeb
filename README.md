@@ -12,7 +12,7 @@ TO PUSH DATABASE TABLE MIGRATION
 
 SCREENSHOTS
 
-<img src="/Assets/01" /><br>
-<img src="/Assets/02" /><br>
-<img src="/Assets/03" /><br>
-<img src="/Assets/04" /><br>
+<img src="BulkyBookWeb/Assets/01.JPG" /><br>
+<img src="BulkyBookWeb/Assets/02.JPG" /><br>
+<img src="BulkyBookWeb/Assets/03.JPG" /><br>
+<img src="BulkyBookWeb/Assets/04.JPG" /><br>
