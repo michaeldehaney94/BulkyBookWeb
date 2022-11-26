@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Category List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-primary">
+                <img src="https://img.icons8.com/fluency-systems-regular/25/FFFFFF/add--v1.png"/>
+                &nbsp; Create New Category
+            </a>
+        </div>
+    </div>
+    <br />
+    <br />
+</div>
+
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Category Name</th>
+            <th>Display Order</th>
+            <th>Created</th>
+            <th>Manage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.Name
+                </td>
+                <td width="30%">
+                    @obj.DisplayOrder
+                </td>
+                <td width="30%">
+                    @obj.CreatedDateTime
+                </td>
+                <td width="30%">
+                    <div class="w-75 btn-group" role="group">
+                        <a asp-controller="Category" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-warning mx-2">
+                           <img src="https://img.icons8.com/ios-glyphs/18/FFFFFF/pencil--v1.png"/>
+                           Edit
+                        </a>
+                        <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-danger mx-2">
+                            <img src="https://img.icons8.com/ios/18/FFFFFF/delete-forever--v1.png"/>
+                            Delete
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
